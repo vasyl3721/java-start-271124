@@ -1,0 +1,37 @@
+package sample;
+import java.util.Scanner;
+import java.io.File;
+public class Main {
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Имя входного файла:");
+        String file = sc.nextLine();
+        System.out.println("Путь к входному файлу::");
+        String folder = sc.nextLine();
+        System.out.println(getFileLength(folder, file));
+        //System.out.println(getFileLength("./src/sample", "Main.java"));
+    }
+    
+    public static String getFileLength(String catalog, String fileName) {
+        File file = new File(catalog, fileName);
+        long fileLength = file.length(); 
+        double length = 0;
+        String size = "";
+        if(fileLength < 1024) {
+        	length = fileLength;
+        	size = "B";
+        } else if(fileLength < 1024*1024) {
+        	length = (double)fileLength / 1024;
+        	size = "KB";
+        } else if(fileLength < 1024*1024*1024) {
+        	length = (double)fileLength / 1024 / 1024;
+        	size = "MB";
+        } else {
+        	length = (double)fileLength / 1024 / 1024 / 1024;
+        	size = "GB";
+        } 
+        String fileLengthStr = String.format("%s - length = %.2f %s", fileName, length, size);
+        return fileLengthStr;
+    }   
+}
