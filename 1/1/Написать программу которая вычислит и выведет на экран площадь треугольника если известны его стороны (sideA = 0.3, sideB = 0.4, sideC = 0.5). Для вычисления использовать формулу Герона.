@@ -1,0 +1,17 @@
+//Написать программу которая вычислит и выведет на экран площадь треугольника если известны его стороны (sideA = 0.3, sideB = 0.4, sideC = 0.5). Для вычисления использовать формулу Герона.
+   
+
+package sample;
+  
+ 
+	public class Main{ 
+
+
+    	  public static void main(String[] args) {
+    	    double a = 0.5, b = 0.4, c = 0.5;
+    	    
+    	    double d = Math.sqrt(a * a + b * b + c * c);
+    	    System.out.println("Площадь треугольника равна " +d);
+    	 
+    }
+  }
