@@ -1,0 +1,18 @@
+//Один литр топлива стоит 1.2$. Ваш автомобиль тратит на 100 км пути 8 литров топлива. Вы собрались в поездку в соседний город. Расстояние до этого города составляет 120 км. Вычислите и выведите на экран сколько вам нужно заплатить за топливо для поездки.
+package sample;
+  
+ 
+	public class Main{ 
+
+
+    	  public static void main(String[] args) {
+    	    double cenaDolar = 1.2;
+    	    double spotrebaLitr = 8;
+			double vdalenost = 1.2;
+			double trikCost = vdalenost * cenaDolar * spotrebaLitr;   
+    	System.out.println( trikCost + "$");
+    	 
+    }
+  }
+   
+   
